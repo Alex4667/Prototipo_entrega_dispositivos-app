@@ -1,0 +1,36 @@
+<!-- Modal Login-->
+<div id="id01" class="modal">
+    <form class="modal-content animate" style="border-radius: 25px;">
+        <div class="imgcontainer">
+            <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">&times;</span> -->
+            <img src="../../../assets/img/brands/expeditedssl.svg" alt="Avatar" class="avatar">
+        </div>
+
+        <h3 class="text-center text-dark">Iniciar sesion</h3>
+
+        <div class="container h-100">
+
+            <!-- User input -->
+            <input class="form-control" type="text" placeholder="Ingresar Usuario" formControlName="username" />
+
+
+            <!-- Password input -->
+            <input class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+
+
+            <!-- Btn Login -->
+            <button type="submit">Login</button>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Recordarme
+            </label>
+        </div>
+
+        <!-- Register buttons -->
+        <div class="container"
+            style="background-color:#f1f1f1; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
+            <button type="button" [routerLink]="'/register'">Crear nueva cuenta</button>
+        </div>
+    </form>
+</div>
