@@ -12,7 +12,10 @@ import { DashboardComponent } from './Components/Views/dashboard/dashboard.compo
 import { UserRetiredComponent } from './Components/Views/user-retired/user-retired.component';
 import { UserTabletComponent } from './Components/Views/user-tablet/user-tablet.component';
 import { UserTabledNewComponent } from './Components/Views/user-tabled-new/user-tabled-new.component';
-import { UserTabletRetiredComponent } from './Components/Views/user-tablet-retired/user-tablet-retired.component';
+
+import { UserTabRetiredComponent } from './Components/Views/user-tab-retired/user-tab-retired.component';
+import { UTabletRetiredComponent } from './Components/Views/u-tablet-retired/u-tablet-retired.component';
+import { UTabRetiredComponent } from './Components/Views/u-tab-retired/u-tab-retired.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { UserTabletRetiredComponent } from './Components/Views/user-tablet-retir
     UserRetiredComponent,
     UserTabletComponent,
     UserTabledNewComponent,
-    UserTabletRetiredComponent
+    UTabletRetiredComponent,
+    UTabRetiredComponent,
+ 
   ],
   imports: [
     BrowserModule,
