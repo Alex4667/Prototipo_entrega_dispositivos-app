@@ -1,0 +1,447 @@
+<main id="main" class="main">
+
+    <!-- Title Page -->
+    <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </nav>
+    </div>
+    <!--  -->
+
+   
+
+        <ul>
+            <li>
+                <a href="#ModuleUserRetired/BancoSerfinanza">
+                    <i class="fa fa-user-plus"></i>
+                    <span data-toggle="modal" data-target="#id01" value="">Retired Import</span>
+                    <span class="badge badge-pill badge-primary">new</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- sidebar-wrapper  -->
+
+        <div class="card-body text-dark">
+            <div class="table-responsive">
+                <table id="example" class="display table-display table-hover dt-responsive nowrap" style="width:100%">
+                    <thead class="text-left">
+
+                        <tr>
+                            <th> </th>
+                            <th>Date</th>
+                            <th>Name</th>
+                            <th>CC</th>
+                            <th>Cargo</th>
+                            <th>Vicidial</th>
+                            <th>Biometrico</th>
+                            <th>Cifin</th>
+                            <th>BPM</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-left">
+
+
+
+                        <tr>
+                            <td><input type="Image" name="" src="../../fondo/svgs/solid/user-slash.svg" width="50px"
+                                    class="btn"></td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <!-- page-wrapper -->
+        <!-- Inicio Modal -->
+        <div class="modal fade" id="AddUser" tabindex="-1" role="dialog" aria-labelledby="ventanaregistro"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-success" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center ">
+                        <img src="../../Image/Logo2.JPG" class="img-fluid">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!--Inicio Formulario de registro-->
+                        <form action="../../modelo/Add_UserRetired_modelo.php" method="POST">
+                            <!-- Inicio Body Modal -->
+                            <div class="container ">
+                                <div class="row">
+
+                                    <!--Inicio logo usuario-->
+                                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 align-self-center">
+                                        <img src="../../Image/usuario.png" width="100%" class="img-fluid">
+
+                                        <table width="100%">
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/calendar-alt.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="Date" id="fechaActual" name="fecha" placeholder=""
+                                                        class="form-control" value="" readonly="readonly" required>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <table width="100%">
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/id-card.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="identificacion"
+                                                        placeholder="Identificacion" class="form-control" required>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <table width="100%">
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/user-tag.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="nombre" placeholder="Nombre"
+                                                        class="form-control" required>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <table width="100%">
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/id-card-alt.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="cargo" placeholder="Cargo"
+                                                        class="form-control" required>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <table width="100%">
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/id-card-alt.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="area" placeholder="Area"
+                                                        class="form-control" required>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <!--Fin logo usuario-->
+
+                                    <!--Inicio Inputs-->
+                                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                        <table width="100%">
+                                            <br>
+                                            <label><b>Motivo</b></label>
+                                            <select class="form-control btn-dark" name="motivo">
+                                                <option>RETIRO</option>
+                                            </select>
+                                            <br>
+                                            <label><b>Medio</b></label>
+                                            <select class="form-control btn-dark" name="medio">
+                                                <option>---select option---</option>
+                                                <option>FORMA 002</option>
+                                                <option>RH</option>
+                                                <option>CORREO</option>
+                                                <option>REVISIÓN RIESGOS</option>
+                                            </select>
+                                            <br>
+                                        </table>
+                                        <table width="100%">
+                                            <label><b>Sistemas de Apoyo - INHOUSE</b></label>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="SARBI">
+
+                                                    </label><br>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="HELPI">
+
+                                                    </label><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="GAWSF">
+
+                                                    </label><br>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="CORRESPONSAL">
+
+                                                    </label><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="DA">
+
+                                                    </label><br>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="GENESYS">
+
+                                                    </label><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="LOTUS">
+
+                                                    </label><br>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="VICIDIAL">
+
+                                                    </label><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="VPN">
+
+                                                    </label><br>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="SIG">
+
+                                                    </label><br>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                    <!--fin Inputs-->
+
+                                    <!--Inicio Inputs-->
+                                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+
+                                        <table width="100%">
+                                            <label><b>Sistemas Misionales</b></label>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="CMS">
+
+                                                    </label>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="eIBS">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="GENESYS">
+
+                                                    </label>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="BRANCH">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="ARISTEO">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%">
+                                            <label><b>Sistemas de Apoyo - Externas</b></label>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="ICS">
+
+                                                    </label>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="NOVASOFT">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="SOIDATA">
+
+                                                    </label>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="AXON">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="eFINAC">
+
+                                                    </label>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="BPM">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="LASERFICHE">
+
+                                                    </label>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="AUTORIZADOR">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="CIFIN">
+
+                                                    </label><br>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="RECONOSER">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="checkbox" name="DETECID">
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%">
+                                            <tr>
+                                                <td>
+                                                    <input type="Image" src="../../fondo/svgs/regular/save.svg"
+                                                        width="60px" name="aceptar" value=""
+                                                        class="btn btn-outline-primary">
+                                                </td>
+                                                <td>
+                                                    <input type="Image" src="../../fondo/svgs/solid/times.svg"
+                                                        width="50px" name="cancelar" data-dismiss="modal" value=""
+                                                        class="btn btn-outline-danger">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <!--fin Inputs-->
+                                </div>
+                            </div>
+                            <!-- Fin Body Modal -->
+                        </form>
+                        <!--Fin Formulario de registro-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal -->
+
+        <!-- Inicio Modal -->
+
+        <div class="modal fade" id="id01" role="dialog" aria-labelledby="ventanaregistro" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-success" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center ">
+
+                        <h4>
+
+                        </h4>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+
+                        <h5>Adjuntar Archivo</h5><br>
+                        <input type="file" id="file-input" />
+                        <script>
+                            function leerArchivo(e) {
+                                var archivo = e.target.files[0];
+                                if (!archivo) {
+                                    return;
+                                }
+                                var lector = new FileReader();
+                                lector.onload = function (e) {
+                                    var contenido = e.target.result;
+                                    mostrarContenido(contenido);
+                                };
+                                lector.readAsText(archivo);
+                            }
+                            function mostrarContenido(contenido) {
+                                var dts = contenido.split("\n");
+                                window.location.href = "../../modelo/Masivo_UserRet/indexar.php?dts=" + dts;
+                            }
+                            document.getElementById('file-input').addEventListener('change', leerArchivo, false);
+                        </script>
+                        <br>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fin Modal -->
+
+
+
+
+
+
+</main>
