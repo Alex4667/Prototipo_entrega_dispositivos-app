@@ -1,6 +1,7 @@
 <!-- Modal Login-->
 <div id="id01" class="modal">
-    <form class="modal-content animate" style="border-radius: 25px;">
+    <!-- Formulario -->
+    <form class="modal-content animate" style="border-radius: 25px;" [formGroup]="Loginform" (ngSubmit)="onSubmit()">
         <div class="imgcontainer">
             <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close"
         title="Close Modal">&times;</span> -->
@@ -12,13 +13,19 @@
         <div class="container h-100">
 
             <!-- User input -->
-            <input class="form-control" type="text" placeholder="Ingresar Usuario" formControlName="username" />
-
+            <input class="form-control" type="text" placeholder="Ingresar Usuario" formControlName="username"
+                [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+            <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                <div *ngIf="f['username'].errors">El nombre Usuario es requerido*</div>
+            </div>
 
             <!-- Password input -->
-            <input class="form-control" type="password" placeholder="Contraseña" formControlName="password">
-
-
+            <input class="form-control" type="password" placeholder="Contraseña" formControlName="password"
+                [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors">La Contraseña es requerida*</div>
+            </div>
+            
             <!-- Btn Login -->
             <button type="submit">Login</button>
         </div>

@@ -12,10 +12,8 @@ import { DashboardComponent } from './Components/Views/dashboard/dashboard.compo
 import { UserRetiredComponent } from './Components/Views/user-retired/user-retired.component';
 import { UserTabletComponent } from './Components/Views/user-tablet/user-tablet.component';
 import { UserTabledNewComponent } from './Components/Views/user-tabled-new/user-tabled-new.component';
-
-import { UserTabRetiredComponent } from './Components/Views/user-tab-retired/user-tab-retired.component';
-import { UTabletRetiredComponent } from './Components/Views/u-tablet-retired/u-tablet-retired.component';
 import { UTabRetiredComponent } from './Components/Views/u-tab-retired/u-tab-retired.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,13 +27,13 @@ import { UTabRetiredComponent } from './Components/Views/u-tab-retired/u-tab-ret
     UserRetiredComponent,
     UserTabletComponent,
     UserTabledNewComponent,
-    UTabletRetiredComponent,
     UTabRetiredComponent,
  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

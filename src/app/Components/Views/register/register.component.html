@@ -5,13 +5,18 @@
             <div class="modal-body p-4 pt-0">
                 <p class="text-center h1 fw-bold  mx-1 mx-md-4 mt-4">Registrar</p>
                 <hr>
-                <!--  -->
-                <form class="form" name="formulario">
+                <!-- Fomulario -->
+                <form class="form" [formGroup]="Registerform" (ngSubmit)="onSubmit()">
 
                     <!-- Input User -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="text" id="username" placeholder="username" />
+                        <input class="form-control" type="text" id="username" placeholder="username"
+                            formControlName="username"
+                            [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
                         <label class="form-label">Usuario</label>
+                        <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                            <div *ngIf="f['username'].errors">El nombre Usuario es requerido*</div>
+                        </div>
                     </div>
 
                     <!-- IP -->
@@ -22,8 +27,15 @@
 
                     <!-- Input password -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="password" id="password" placeholder="password" />
+                        <input class="form-control" type="password" id="password" placeholder="password"
+                            formControlName="password"
+                            [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
                         <label class="form-label">Contraseña</label>
+                        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">La Contraseña es requerida*</div>
+                            <div *ngIf="f['password'].errors['minlength']">La Contraseña debe tener al menos 6
+                                characters</div>
+                        </div>
 
                     </div>
                     <hr>
