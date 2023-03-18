@@ -13,6 +13,7 @@ export class RegisterComponent implements OnInit {
   Registerform!: FormGroup;
   submitted = false;
 
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -32,7 +33,8 @@ export class RegisterComponent implements OnInit {
     if (this.Registerform.invalid) {
       return;
     }
- 
+
+
   }
 
 }

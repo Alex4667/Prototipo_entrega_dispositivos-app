@@ -11,7 +11,7 @@
                     <!-- Input User -->
                     <div class="form-floating mb-3">
                         <input class="form-control" type="text" id="username" placeholder="username"
-                            formControlName="username"
+                            formControlName="username" value="eflorez"
                             [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
                         <label class="form-label">Usuario</label>
                         <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
@@ -28,7 +28,7 @@
                     <!-- Input password -->
                     <div class="form-floating mb-3">
                         <input class="form-control" type="password" id="password" placeholder="password"
-                            formControlName="password"
+                            formControlName="password" value="123456789"
                             [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
                         <label class="form-label">Contraseña</label>
                         <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">

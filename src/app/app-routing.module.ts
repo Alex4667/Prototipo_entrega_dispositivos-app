@@ -1,13 +1,13 @@
 import { registerLocaleData } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './Components/Views/dashboard/dashboard.component';
-import { LoginComponent } from './Components/Views/login/login.component';
-import { RegisterComponent } from './Components/Views/register/register.component';
-import { UTabRetiredComponent } from './Components/Views/u-tab-retired/u-tab-retired.component';
-import { UserRetiredComponent } from './Components/Views/user-retired/user-retired.component';
-import { UserTabledNewComponent } from './Components/Views/user-tabled-new/user-tabled-new.component';
-import { UserTabletComponent } from './Components/Views/user-tablet/user-tablet.component';
+import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import { LoginComponent } from './Pages/login/login.component';
+import { RegisterComponent } from './Pages/register/register.component';
+import { UTabRetiredComponent } from './Pages/u-tab-retired/u-tab-retired.component';
+import { UserRetiredComponent } from './Pages/user-retired/user-retired.component';
+import { UserTabledNewComponent } from './Pages/user-tabled-new/user-tabled-new.component';
+import { UserTabletComponent } from './Pages/user-tablet/user-tablet.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },

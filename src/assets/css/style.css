@@ -157,32 +157,6 @@ h6 {
 }
 
 
-/* Breadcrumbs */
-.breadcrumb {
-	font-size: 14px;
-	font-family: "Nunito", sans-serif;
-	color: #899bbd;
-	font-weight: 600;
-}
-
-.breadcrumb a {
-	color: #899bbd;
-	transition: 0.3s;
-}
-
-.breadcrumb a:hover {
-	color: #51678f;
-}
-
-.breadcrumb .breadcrumb-item::before {
-	color: #899bbd;
-}
-
-.breadcrumb .active {
-	color: #51678f;
-	font-weight: 600;
-}
-
 /*--------------------------------------------------------------
   # Sidebar
   --------------------------------------------------------------*/
@@ -191,7 +165,7 @@ h6 {
 	top: 60px;
 	left: 0;
 	bottom: 0;
-	width: 300px;
+	width: 280px;
 	z-index: 996;
 	transition: all 0.3s;
 	padding: 20px;
@@ -200,7 +174,7 @@ h6 {
 	scrollbar-color: #aab7cf transparent;
 	box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
 	/* Color de fondo del sidebar */
-	background-color: #0c1e35;
+	background-color: #31353D;
 
 }
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,12 @@ export class LoginComponent implements OnInit {
   Loginform!: FormGroup; // Formulario
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    
+    
+  ) { }
 
   ngOnInit(): void {
     this.Loginform = this.formBuilder.group({
@@ -31,6 +38,11 @@ export class LoginComponent implements OnInit {
       return;
     }
 
+
+  }
+
+  cerrarSesion() {
+    localStorage.clear();
   }
 
 

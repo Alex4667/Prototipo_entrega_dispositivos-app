@@ -1,0 +1,307 @@
+<main id="main" class="main">
+
+    <!-- Title Page -->
+    <div class="pagetitle">
+        <h1>User Tablet</h1>
+    </div>
+    <!--  -->
+
+
+    <!-- Botones -->
+    <div>
+        <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#verticalycentered">
+            <i class="fa fa-plus"></i>
+            <span>Nuevo</span> </button>
+    </div>
+    <br>
+    <!-- Tabla -->
+    <div class="table">
+        <table class="table table-hover table-bordered" id="tabla" width="100%" cellspacing="0">
+            <thead class="table-dark">
+                <tr style="text-align:center">
+                    <th>ID</th>
+                    <th>Entrega</th>
+                    <th>Imei</th>
+                    <th>Activo Fijo</th>
+                    <th>Usuario MDM</th>
+                    <th>Responsable</th>
+                    <th>Cedula</th>
+
+                </tr>
+            </thead>
+            <tbody style="font-family:Arial;font-size:14px; ">
+
+                <tr>
+                    <td style="text-align:center">
+                        prueba
+                    </td>
+                    <td>
+                        prueba
+                    </td>
+                    <td>
+                        prueba
+                    </td>
+                    <td>
+                        prueba
+                    </td>
+                    <td>
+                        prueba
+                    </td>
+
+                    <td>
+                        prueba
+                    </td>
+
+                    <td>
+                        prueba
+                    </td>
+
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- modal Añadir-->
+    <div class="modal fade" id="verticalycentered" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-success" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- img -->
+                    <h5 class="modal-title">Logo</h5>
+                    <!--  -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <!-- Inicio Body Modal -->
+                        <div class="container ">
+                            <div class="row">
+                                <!--Inicio logo usuario-->
+                                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 align-self-center">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/calendar-alt.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="Date" id="AddfechaActual" name="DeliverDate"
+                                                        placeholder="" class="form-control" value=""
+                                                        readonly="readonly">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/id-card.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="ime" name="Imei" placeholder="Imei"
+                                                        class="form-control" required="">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/phone-square-alt.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="pho" name="Phone" placeholder="Phone"
+                                                        class="form-control" required="">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/network-wired.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="ip" name="IP" placeholder="IP"
+                                                        class="form-control" required="">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/bars.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="fix" name="FixedAsset"
+                                                        placeholder="Activo Fijo" class="form-control" required="">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/box.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="bat" name="Batch" placeholder="Lote"
+                                                        class="form-control" required="">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="4"> <img src="../../fondo/svgs/solid/tablet-alt.svg"
+                                                        class="img-fluid" width="200px"></td>
+                                                <td>
+                                                    <div id="ace" style="display: block;">
+                                                        <input id="ace" type="Image"
+                                                            src="../../fondo/svgs/solid/check.svg" width="50px"
+                                                            name="aceptar" value="" class="btn btn-outline-primary">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div id="act" style="display: none;">
+                                                        <input id="act" type="Image"
+                                                            src="../../fondo/svgs/solid/upload.svg" width="50px"
+                                                            name="actualizar" data-dismiss="modal" value=""
+                                                            onclick="actualizar()" class="btn btn-outline-danger">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div id="act_dato" style="display: none;">
+                                                        <input id="act_dato" type="Image"
+                                                            src="../../fondo/svgs/solid/user-edit.svg" width="50px"
+                                                            name="actualizar_dato" data-dismiss="modal" value=""
+                                                            onclick="actualizar_Dato()" class="btn btn-outline-danger">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="Image" src="../../fondo/svgs/solid/times.svg"
+                                                        width="50px" name="cancelar" onclick="location=''"
+                                                        data-dismiss="modal" value="" class="btn btn-outline-danger">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--Fin logo usuario-->
+
+                                <!--Inicio Inputs-->
+                                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+
+                                    <table width="100%">
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/user-tag.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="res" name="responsy" placeholder="responsy"
+                                                        class="form-control">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/user-check.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="use" name="UserMDM" placeholder="UserMDM"
+                                                        class="form-control">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/closed-captioning.svg"
+                                                        width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="ide" name="IdentificationCard"
+                                                        placeholder="Identificacion" class="form-control">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/id-card-alt.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="off" name="Office" placeholder="Office"
+                                                        class="form-control">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/city.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="cit" name="City" placeholder="City"
+                                                        class="form-control">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/link.svg" width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="lin" name="linkage" placeholder="Vinculacion"
+                                                        class="form-control">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/chalkboard-teacher.svg"
+                                                        width="20px">
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="coo" name="Coordinator"
+                                                        placeholder="Coordinator" class="form-control">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../fondo/svgs/solid/closed-captioning.svg"
+                                                        width="20px">
+                                                </td>
+                                                <td>
+                                                    <textarea id="obs" name="Observations" rows="8" cols="40">
+                                                </textarea>
+                                                </td>
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--fin Inputs-->
+
+                                <!--Inicio Inputs-->
+
+                                <!--fin Inputs-->
+                            </div>
+                        </div>
+                        <!-- Fin Body Modal -->
+                    </form>
+
+                </div>
+                <div class="modal-footer"> <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save
+                        changes</button></div>
+            </div>
+        </div>
+    </div>
+
+</main>
