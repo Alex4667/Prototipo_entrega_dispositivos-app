@@ -2,7 +2,7 @@
 /* The body (background) */
 .modal {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("../../../../assets/img/fondo.png");
+        url("../../../assets/img/fondo.png");
     /* Black w/ opacity */
     background-color: rgba(0, 0, 0, 0.4);
 }

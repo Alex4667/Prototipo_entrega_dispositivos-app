@@ -65,7 +65,7 @@ img.avatar {
     overflow: auto;
     /* Enable scroll if needed */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),
-    url("../../../../assets/img/fondo.png");
+    url("../../../assets/img/fondo.png");
    /* Black w/ opacity */
    background-color: rgba(0, 0, 0, 0.4);
     padding-top: 5px;
