@@ -11,14 +11,19 @@ import { UserTabletComponent } from './Pages/user-tablet/user-tablet.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: DashboardComponent },
-  { path: 'UserRetired', component: UserRetiredComponent },
-  { path: 'UserTabled', component: UserTabletComponent },
-  { path: 'UserTabletNew', component: UserTabledNewComponent },
-  { path: 'UserTabletRetired', component: UTabRetiredComponent }
 
+  {
+    path: 'home',
+    loadChildren: () => import('./Pages/page.module').then(m => m.PagesModule)
+  },
+
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {
+    path: '**',
+    redirectTo: '/login'
+  },
 
 ];
 
