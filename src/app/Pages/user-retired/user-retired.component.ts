@@ -17,8 +17,6 @@ export class UserRetiredComponent implements OnInit {
 
   ngOnInit(): void {
 
- 
-
   }
 
   ngAfterViewInit(): void {

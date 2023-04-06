@@ -14,7 +14,7 @@ export class EntregaInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const access_token = localStorage.getItem('access_token')!;
-    
+
     if (access_token) {
       let cloned = request.clone({
         headers: request.headers
@@ -22,10 +22,10 @@ export class EntregaInterceptor implements HttpInterceptor {
           .set('Content-Type', 'aplication/json'),
       });
       return next.handle(cloned);
-    }else{
+    } else {
       return next
-      .handle(request);
+        .handle(request);
     }
-   
+
   }
 }

@@ -6,12 +6,12 @@
                 <p class="text-center h1 fw-bold  mx-1 mx-md-4 mt-4">Registrar</p>
                 <hr>
                 <!-- Fomulario -->
-                <form class="form" [formGroup]="Registerform" (ngSubmit)="onSubmit()">
+                <form class="form" [formGroup]="Registerform" (ngSubmit)="registrar()">
 
                     <!-- Input User -->
                     <div class="form-floating mb-3">
                         <input class="form-control" type="text" id="username" placeholder="username"
-                            formControlName="username" value="eflorez"
+                            formControlName="username" 
                             [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
                         <label class="form-label">Usuario</label>
                         <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
@@ -28,7 +28,7 @@
                     <!-- Input password -->
                     <div class="form-floating mb-3">
                         <input class="form-control" type="password" id="password" placeholder="password"
-                            formControlName="password" value="123456789"
+                            formControlName="password" 
                             [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
                         <label class="form-label">Contraseña</label>
                         <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">

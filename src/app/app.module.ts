@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/Layouts/navbar/navbar.component';
 import { SidebarComponent } from './Components/Layouts/sidebar/sidebar.component';
-import { FooterComponent } from './Components/Layouts/footer/footer.component';
+import { FooterComponent } from './Components/footer/footer.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { RegisterComponent } from './Pages/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
