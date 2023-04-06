@@ -14,6 +14,8 @@ export class RegisterComponent implements OnInit {
 
   Registerform!: FormGroup;
   submitted = false;
+  ipAddress: any;
+
 
 
   constructor(private formBuilder: FormBuilder,
@@ -26,6 +28,8 @@ export class RegisterComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]]
 
     });
+
+    this.getIPAddress();
   }
 
   get f() { return this.Registerform.controls; }
@@ -54,23 +58,42 @@ export class RegisterComponent implements OnInit {
       },
 
       error: (error) => {
-        // Si la solicitud falla, muestra una alerta de error
+        // Si la solicitud falla
         Swal.fire({
           title: 'Error!',
           text: 'No se ha podido registrar el usuario.',
           icon: 'error'
         });
-
         console.log(error);
       }
     });
-
-
-
-
-
-
-
   }
+
+  getIPAddress() {
+    window.addEventListener('load', () => {
+      const RTCPeerConnection = window.RTCPeerConnection || window.RTCPeerConnection;
+      const pc = new RTCPeerConnection({ iceServers: [] });
+      const noop = () => { };
+      pc.createDataChannel('');
+      pc.createOffer(pc.setLocalDescription.bind(pc), noop);
+
+
+      pc.onicecandidate = (ice) => {
+        if (ice.candidate != null) {
+          const regex: RegExp = /(?:[0-9]{1,3}\.){3}[0-9]{1,3}/;
+          const ipAddressMatch = regex.exec(ice.candidate.candidate);
+          if (ipAddressMatch != null) {
+            this.ipAddress = ipAddressMatch[0];
+          } else {
+            console.error('No se pudo obtener la dirección IP');
+          }
+        }
+
+
+      };
+    });
+  }
+
+
 }
 
