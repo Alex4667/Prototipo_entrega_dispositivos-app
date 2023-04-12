@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
 
     this._usuarioService.register(this.Registerform.value).subscribe({
       next: (data) => {
-        console.log(data.msg);
+        console.log(data.message);
         this._route.navigateByUrl('/login')
 
         // Si la solicitud fue exitosa

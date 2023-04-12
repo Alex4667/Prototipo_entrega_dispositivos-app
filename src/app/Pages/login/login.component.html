@@ -18,6 +18,9 @@
             <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
                 <div *ngIf="f['username'].errors">El nombre Usuario es requerido*</div>
             </div>
+            <div class=" text-danger" *ngIf="userError">
+                {{ userError }}
+            </div>
 
             <!-- Password input -->
             <input class="form-control" type="password" placeholder="Contraseña" formControlName="password"
@@ -25,11 +28,14 @@
             <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
                 <div *ngIf="f['password'].errors">La Contraseña es requerida*</div>
             </div>
-            
+            <div class=" text-danger" *ngIf="passwordError">
+                {{ passwordError }}
+            </div>
+
             <!-- Btn Login -->
             <button type="submit">Entrar</button>
-           
-         
+
+
         </div>
 
         <!-- Register buttons -->

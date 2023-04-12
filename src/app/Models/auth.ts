@@ -1,12 +1,12 @@
-export interface IUsuario{
+export interface LoginI {
     username: string;
     password: string;
 }
 
-export interface Results{
-    msg:string;
-    
-}
-export interface ResultsJWT{
+
+export interface ResultsJWT {
     access_token: string;
+    message: string;
+    status: string;
+    user_id: number;
 }
