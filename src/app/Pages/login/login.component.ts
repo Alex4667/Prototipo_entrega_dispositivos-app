@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
 
     this._usuarioService.login(this.Loginform.value).subscribe({
       next: (data) => {
+
         if (data.status == 'not_found') {
           this.userError = data.message;
           console.log(this.userError);
@@ -60,7 +61,8 @@ export class LoginComponent implements OnInit {
           console.log(this.passwordError);
 
         } else if (data.status == 'ok') {
-          localStorage.setItem('token', data.access_token);
+          this._jwt.login(data.token);
+          //localStorage.setItem('token', data.token);
           this.user_id = data.user_id
           this.message = data.message;
 

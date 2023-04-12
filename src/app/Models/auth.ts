@@ -5,7 +5,7 @@ export interface LoginI {
 
 
 export interface ResultsJWT {
-    access_token: string;
+    token: string;
     message: string;
     status: string;
     user_id: number;
